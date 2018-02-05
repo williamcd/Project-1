@@ -12,6 +12,7 @@ const deck = {
     cards: ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'],
     suits: ["Hearts", "Diamonds", "Clubs", "Spades"]
 }
+//drawCard logic
 function drawCard() {
   suit = Math.floor((Math.random() * 4) + 0);
   name = Math.floor((Math.random() * 13) + 0);
@@ -50,6 +51,7 @@ function startGame() {
   console.log("Player score is... " + playerScore);
   console.log("Dealer score is... " + dealerScore);
 }
+//newHand logic
 function newHand() {
   playerScore = 0;
   dealerScore = 0;
