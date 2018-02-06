@@ -1,3 +1,11 @@
 h1 {
     font-family: 'Dopio One';
 }
+#buttons {
+
+}
+letter {
+    height: 25px;
+    width: 25px;
+    background-color: red;
+}
