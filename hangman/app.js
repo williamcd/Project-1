@@ -17,7 +17,15 @@ let buttons = function () {
 
     for (i = 0; i < alphabet.length; i++) {
         letter = document.createElement('li');
+        letter.classList.add("button");
+        letter.textContent = alphabet[i]; 
         letters.append(letter);
     }
 }
 buttons()
+
+document.getElementsByClassName("button").onclick = function() {test()};
+
+function test() {
+    console.log('Works!')
+}
