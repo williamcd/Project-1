@@ -31,6 +31,7 @@ buttons()
 
 
 //Check for match logic
+let lives = 6;
 function test() {
     console.log('Works!')
 }
@@ -41,8 +42,10 @@ $( "li" ).click(function() {
     for (i = 0; i < word.length; i++) {
         if (text === word[i]) {
             console.log('Match!')
-        } else if (i = word.length) {
-            console.log('No match!')
+        }
+        if (i === word.length && text !== word[i]) {
+            lives--
+            console.log(lives)
         }
     }
 });
