@@ -104,3 +104,9 @@ li {
 #body {
     align-self: center;
 }
+.word {
+    font-size: 50px;
+    position: absolute;
+    left: 270px;
+    top: 400px;
+}
