@@ -25,12 +25,18 @@ body {
     width: 75px;
     border-radius: 50%;
     background-color: black;
+    position: absolute;
+    left: 250px;
+    top: 125px;
 }
 .body {
     width: 5px;
     height: 100px;
     background-color: black;
     border-radius: 0%;
+    position: absolute;
+    left: 285px;
+    top: 200px;
 }
 .armLeft {
     width: 5px;
@@ -38,6 +44,9 @@ body {
     background-color: black;
     border-radius: 0%;
     transform: rotate(15deg);
+    position: absolute;
+    left: 275px;
+    top: 195px;
 }
 .armRight {
     width: 5px;
@@ -45,6 +54,9 @@ body {
     background-color: black;
     border-radius: 0%;
     transform: rotate(-15deg);
+    position: absolute;
+    left: 296px;
+    top: 195px;
 }
 .legLeft {
     width: 5px;
@@ -52,6 +64,9 @@ body {
     background-color: black;
     border-radius: 0%;
     transform: rotate(15deg);
+    position: absolute;
+    left: 278px;
+    top: 295px;
 }
 .legRight {
     width: 5px;
@@ -59,6 +74,9 @@ body {
     background-color: black;
     border-radius: 0%;
     transform: rotate(-15deg);
+    position: absolute;
+    left: 292px;
+    top: 295px;
 }
 #buttons {
     display: flex;
