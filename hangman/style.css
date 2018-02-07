@@ -107,6 +107,9 @@ li {
 .word {
     font-size: 50px;
     position: absolute;
-    left: 270px;
+    left: 25%;
     top: 400px;
+}
+.blank {
+    background-color: white;
 }
