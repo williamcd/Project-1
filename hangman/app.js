@@ -1,6 +1,6 @@
 //variables and alphabet array
 const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-const words = ['BANANA', 'STRAWBERRY', 'MANGO', 'PEACH', ];
+const words = ['BANANA', 'STRAWBERRY', 'MANGO', 'PEACH',];
 let word = [];
 let spaces;
 
@@ -14,8 +14,8 @@ function newGame() {
     $(".legLeft").css("background-color", "white")
     $(".legRight").css("background-color", "white")
     word = [];
-    $( ".blank" ).remove();
-    word = (words[Math.floor(Math.random()*words.length)]).split("");
+    $(".blank").remove();
+    word = (words[Math.floor(Math.random() * words.length)]).split("");
     spaces = word.length;
     console.log(word);
     console.log(spaces);
@@ -23,7 +23,7 @@ function newGame() {
     for (i = 0; i < word.length; i++) {
         blank = document.createElement('li');
         blank.classList.add("blank")
-        blank.textContent = "_ ";
+        blank.textContent = "__";
         wordLength.append(blank);
     }
 }
@@ -32,11 +32,11 @@ function newGame() {
 function win() {
     alert("you win!")
 }
+
 //lose
 function lose() {
     alert("you lose!")
 }
-
 
 //generate buttons and word length
 let buttons = function () {
@@ -47,12 +47,11 @@ let buttons = function () {
     for (i = 0; i < alphabet.length; i++) {
         letter = document.createElement('li');
         letter.classList.add("button");
-        letter.textContent = alphabet[i]; 
+        letter.textContent = alphabet[i];
         letters.append(letter);
     }
 }
 buttons()
-
 
 //Check for match logic
 let lives = 6;
@@ -60,7 +59,7 @@ let match = 0;
 function test() {
     console.log('Works!')
 }
-$("li").click(function() {
+$("li").click(function () {
     match = 0;
     // $( this ).slideUp();
     $(this).css("background-color", "black")
