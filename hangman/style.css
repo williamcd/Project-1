@@ -113,3 +113,8 @@ li {
 .blank {
     background-color: white;
 }
+button {
+    align-self: center;
+    top: 80px;
+    left: 45%;
+}
