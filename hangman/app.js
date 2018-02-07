@@ -4,10 +4,15 @@ const words = ['BANANA', 'STRAWBERRY', 'MANGO', 'PEACH', ];
 let word = [];
 let spaces;
 
-
 //reset game
 function newGame() {
     $(".button").css("background-color", "yellow")
+    $(".head").css("background-color", "white")
+    $(".body").css("background-color", "white")
+    $(".armLeft").css("background-color", "white")
+    $(".armRight").css("background-color", "white")
+    $(".legLeft").css("background-color", "white")
+    $(".legRight").css("background-color", "white")
     word = [];
     $( ".blank" ).remove();
     word = (words[Math.floor(Math.random()*words.length)]).split("");
@@ -21,6 +26,15 @@ function newGame() {
         blank.textContent = "_ ";
         wordLength.append(blank);
     }
+}
+
+//win
+function win() {
+    alert("you win!")
+}
+//lose
+function lose() {
+    alert("you lose!")
 }
 
 
@@ -61,5 +75,19 @@ $("li").click(function() {
     if (match === 0) {
         lives--
         console.log('No match!')
+    }
+    if (lives === 5) {
+        $(".head").css("background-color", "black")
+    } else if (lives === 4) {
+        $(".body").css("background-color", "black")
+    } else if (lives === 3) {
+        $(".armLeft").css("background-color", "black")
+    } else if (lives === 2) {
+        $(".armRight").css("background-color", "black")
+    } else if (lives === 1) {
+        $(".legLeft").css("background-color", "black")
+    } else if (lives === 0) {
+        $(".legRight").css("background-color", "black")
+        lose()
     }
 });
