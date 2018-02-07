@@ -1,8 +1,11 @@
+//variables and alphabet array
 const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 const words = ['banana', 'strawberry', 'mango', 'peach', ];
 let word = [];
 let spaces;
 
+
+//reset game
 function newGame() {
     word = (words[Math.floor(Math.random()*words.length)]).split("");
     spaces = word.length;
@@ -10,6 +13,8 @@ function newGame() {
     console.log(spaces);
 }
 
+
+//generate buttons
 let buttons = function () {
     myButtons = document.getElementById('buttons');
     letters = document.createElement('ul');
@@ -24,8 +29,21 @@ let buttons = function () {
 }
 buttons()
 
-document.getElementsByClassName("button").onclick = function() {test()};
 
+//Check for match logic
 function test() {
     console.log('Works!')
 }
+$( "li" ).click(function() {
+    $( this ).slideUp();
+    let text = ($(this).text())
+    console.log('Works!')
+    console.log(text)
+    for (i = 0; i < word.length; i++) {
+        if (text === word[i]) {
+            console.log('Match!')
+        } else {
+            console.log('No match!')
+        }
+    }
+});
