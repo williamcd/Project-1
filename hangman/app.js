@@ -1,6 +1,6 @@
 //variables and alphabet array
 const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-const words = ['banana', 'strawberry', 'mango', 'peach', ];
+const words = ['BANANA', 'STRAWBERRY', 'MANGO', 'PEACH', ];
 let word = [];
 let spaces;
 
@@ -37,12 +37,11 @@ function test() {
 $( "li" ).click(function() {
     $( this ).slideUp();
     let text = ($(this).text())
-    console.log('Works!')
     console.log(text)
     for (i = 0; i < word.length; i++) {
         if (text === word[i]) {
             console.log('Match!')
-        } else {
+        } else if (i = word.length) {
             console.log('No match!')
         }
     }
