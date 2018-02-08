@@ -2,6 +2,8 @@
 const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 const words = ['PIKACHU', 'SQUIRTLE', 'CHARMANDER', 'BULBASAUR', 'RATTATA', 'DIGLETT', 'MAGNEMITE', 'CHANSEY', 'DITTO'];
 let word = [];
+let wins;
+let losses;
 blank = document.createElement('li');
 
 //reset game
@@ -33,13 +35,16 @@ function newGame() {
 //win
 function checkWin() {
     if (totalMatched === word.length) {
-        alert('You win!')
+        alert('You saved a pixel life!')
+        wins++
+        document.getElementById('winsLosses').text("Wins: " + wins + "  Losses: " + losses)
     }
 }
 
 //lose
 function lose() {
-    alert("you lose!")
+    alert("You killed a stick man!!!!")
+    losses++
 }
 
 //generate buttons and word length
