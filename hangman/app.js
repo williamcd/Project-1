@@ -1,6 +1,6 @@
 //variables and alphabet array
 const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-const words = ['BANANA', 'STRAWBERRY', 'MANGO', 'PEACH',];
+const words = ['PIKACHU', 'SQUIRTLE', 'CHARMANDER', 'BULBASAUR', 'RATTATA', 'DIGLETT', 'MAGNEMITE', 'CHANSEY', 'DITTO'];
 let word = [];
 blank = document.createElement('li');
 
@@ -14,6 +14,7 @@ function newGame() {
     $(".legLeft").css("background-color", "white")
     $(".legRight").css("background-color", "white")
     word = [];
+    totalMatched = 0;
     $(".blank").remove();
     word = (words[Math.floor(Math.random() * words.length)]).split("");
     // spaces = word.length;
