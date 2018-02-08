@@ -3,6 +3,7 @@ const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M
 const words = ['BANANA', 'STRAWBERRY', 'MANGO', 'PEACH',];
 let word = [];
 let spaces;
+blank = document.createElement('li');
 
 //reset game
 function newGame() {
@@ -67,7 +68,10 @@ $("li").click(function () {
     console.log(text)
     for (i = 0; i < word.length; i++) {
         if (text === word[i]) {
+            let space = document.getElementsByClassName("blank")[i].text;
             console.log('Match!')
+            space = word[i]
+            // $(".blank"+[i].textContent(word[i]));
             match++
         }
     }
