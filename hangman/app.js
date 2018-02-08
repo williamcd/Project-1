@@ -2,7 +2,6 @@
 const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 const words = ['BANANA', 'STRAWBERRY', 'MANGO', 'PEACH',];
 let word = [];
-let spaces;
 blank = document.createElement('li');
 
 //reset game
@@ -17,9 +16,9 @@ function newGame() {
     word = [];
     $(".blank").remove();
     word = (words[Math.floor(Math.random() * words.length)]).split("");
-    spaces = word.length;
+    // spaces = word.length;
     console.log(word);
-    console.log(spaces);
+    console.log(word.length);
     wordLength = document.getElementById('wordLength')
     for (i = 0; i < word.length; i++) {
         blank = document.createElement('li');
@@ -30,8 +29,10 @@ function newGame() {
 }
 
 //win
-function win() {
-    alert("you win!")
+function checkWin() {
+    if (totalMatched === word.length) {
+        alert('You win!')
+    }
 }
 
 //lose
@@ -57,6 +58,7 @@ buttons()
 //Check for match logic
 let lives = 6;
 let match = 0;
+let totalMatched = 0;
 function test() {
     console.log('Works!')
 }
@@ -66,13 +68,15 @@ $("li").click(function () {
     $(this).css("background-color", "black")
     let text = ($(this).text())
     console.log(text)
-    for (i = 0; i < word.length; i++) {
+    for (let i = 0; i < word.length; i++) {
         if (text === word[i]) {
-            let space = document.getElementsByClassName("blank")[i].text;
             console.log('Match!')
-            space = word[i]
-            // $(".blank"+[i].textContent(word[i]));
+            let index = i
+            console.log(i)
+            $(".blank").eq(i).text(text)
             match++
+            totalMatched++
+            checkWin()
         }
     }
     if (match === 0) {
