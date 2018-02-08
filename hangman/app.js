@@ -15,6 +15,7 @@ function newGame() {
     $(".legRight").css("background-color", "white")
     word = [];
     totalMatched = 0;
+    lives = 6;
     $(".blank").remove();
     word = (words[Math.floor(Math.random() * words.length)]).split("");
     // spaces = word.length;
