@@ -90,7 +90,7 @@ ul {
     width: 600px;
 }
 li {
-    background-color: lightblue;
+    background-color: yellow;
     color: black;
     margin: 10px 5px;
     display: inline-flex;
@@ -114,7 +114,9 @@ li {
     background-color: white;
 }
 button {
-    align-self: center;
-    top: 80px;
+    position: absolute;
     left: 45%;
+    top: 85px;
+    background-color: black;
+    color: white;
 }
